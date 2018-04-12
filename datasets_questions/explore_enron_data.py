@@ -19,4 +19,41 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
+print len(enron_data)
+print len(enron_data['METTS MARK'])
+key=enron_data.keys()
+#print key
+print enron_data['METTS MARK']['poi']
 
+i=0
+for name in enron_data:
+	if enron_data[name]['poi'] ==True:
+		i+=1
+print i
+
+print enron_data['PRENTICE JAMES']['total_stock_value']
+print enron_data['COLWELL WESLEY']['from_this_person_to_poi']
+print enron_data['SKILLING JEFFREY K']['exercised_stock_options']
+print enron_data['SKILLING JEFFREY K']['total_payments']
+print enron_data['LAY KENNETH L']['total_payments']
+print enron_data['FASTOW ANDREW S']['total_payments']
+
+###Quiz 27
+i=0
+for name in enron_data:
+	if enron_data[name]['salary'] =='NaN':
+		i+=1
+print len(enron_data)-i
+
+j=0
+for name in enron_data:
+	if enron_data[name]['email_address'] =='NaN':
+		j+=1
+print len(enron_data)-j
+
+###Quiz 29
+i=0
+for name in enron_data:
+	if enron_data[name]['total_payments'] =='NaN':
+		i+=1
+print i, i*1.0/len(enron_data)

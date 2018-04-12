@@ -31,7 +31,20 @@ plt.show()
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
 
+from sklearn.ensemble import RandomForestClassifier
+clf = RandomForestClassifier()
+clf = clf.fit(features_train, labels_train)
+pred= clf.predict(features_test)
 
+print pred
+print clf.score(features_test,labels_test)
+
+###print out the score of prediction
+from sklearn.metrics import accuracy_score
+print accuracy_score(pred, labels_test)
+###print out number of correct prediction
+print accuracy_score(pred, labels_test, normalize=False)
+print len(features_train[0])
 
 
 
