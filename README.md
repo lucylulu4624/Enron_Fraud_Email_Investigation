@@ -1,1 +1,1 @@
-Various ML techniques including  using sciki-learn for email classification
+Various ML techniques including linear regression, naive bayes, decision tree, svm using python and sciki-learn for a large amount of email classification
