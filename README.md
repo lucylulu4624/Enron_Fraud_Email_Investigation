@@ -1,4 +1,1 @@
-ud120-projects
-==============
-
-Starter project code Udacity ud120
+Various ML techniques including  using sciki-learn for email classification
